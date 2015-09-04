@@ -51,6 +51,7 @@ public class Int_Bus extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
+        setResizable(false);
 
         JPanel_Session.setBackground(new java.awt.Color(102, 102, 102));
 
