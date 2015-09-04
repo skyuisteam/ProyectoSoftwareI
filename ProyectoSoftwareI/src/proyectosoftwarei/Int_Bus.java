@@ -5,17 +5,24 @@
  */
 package proyectosoftwarei;
 
+import java.awt.Color;
 /**
  *
  * @author YURS
  */
 public class Int_Bus extends javax.swing.JFrame {
 
+    String mensaje;
+    Color color;
+    boolean condicion = true;
     /**
      * Creates new form Int_Bus
      */
     public Int_Bus() {
         initComponents();
+        this.setResizable(false);
+        JPanel_Message.setVisible(false);
+        JPanel_Session.setVisible(true);
     }
 
     /**
@@ -35,9 +42,12 @@ public class Int_Bus extends javax.swing.JFrame {
         txt_Password = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         JPanel_Message = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        lbl_Message_ACELERE = new javax.swing.JLabel();
-        lbl_title2 = new javax.swing.JLabel();
+        lbl_title3 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lbl_Message = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
@@ -49,6 +59,7 @@ public class Int_Bus extends javax.swing.JFrame {
         lbl_title1.setText("INICIO:");
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel2.setMaximumSize(new java.awt.Dimension(32500, 32500));
 
         jLabel2.setBackground(new java.awt.Color(51, 51, 51));
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -122,78 +133,126 @@ public class Int_Bus extends javax.swing.JFrame {
 
         JPanel_Message.setBackground(new java.awt.Color(102, 102, 102));
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
+        lbl_title3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        lbl_title3.setForeground(new java.awt.Color(255, 255, 255));
+        lbl_title3.setText("MENSAJE:");
 
-        lbl_Message_ACELERE.setBackground(new java.awt.Color(51, 51, 51));
-        lbl_Message_ACELERE.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
-        lbl_Message_ACELERE.setForeground(new java.awt.Color(0, 102, 204));
-        lbl_Message_ACELERE.setText("ACELERE");
-        lbl_Message_ACELERE.setToolTipText("");
+        jPanel3.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel3.setMaximumSize(new java.awt.Dimension(32500, 32500));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(lbl_Message_ACELERE, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                .addGap(24, 24, 24))
+        lbl_Message.setBackground(new java.awt.Color(51, 51, 51));
+        lbl_Message.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
+        lbl_Message.setForeground(new java.awt.Color(0, 102, 204));
+        lbl_Message.setText("ACELERE");
+        lbl_Message.setToolTipText("");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 330, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(35, 35, 35)
+                    .addComponent(lbl_Message, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                    .addGap(35, 35, 35)))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(lbl_Message_ACELERE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(34, 34, 34))
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 112, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addGap(28, 28, 28)
+                    .addComponent(lbl_Message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(28, 28, 28)))
         );
 
-        lbl_title2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        lbl_title2.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_title2.setText("Mensaje:");
+        jButton4.setText("Changer");
+        jButton4.setToolTipText("");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout JPanel_MessageLayout = new javax.swing.GroupLayout(JPanel_Message);
         JPanel_Message.setLayout(JPanel_MessageLayout);
         JPanel_MessageLayout.setHorizontalGroup(
             JPanel_MessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanel_MessageLayout.createSequentialGroup()
-                .addGroup(JPanel_MessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPanel_MessageLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(JPanel_MessageLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lbl_title2, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(49, 49, 49)
+                .addComponent(lbl_title3)
+                .addContainerGap(312, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPanel_MessageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(60, 60, 60))
+            .addGroup(JPanel_MessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPanel_MessageLayout.createSequentialGroup()
+                    .addGap(60, 60, 60)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(60, Short.MAX_VALUE)))
         );
         JPanel_MessageLayout.setVerticalGroup(
             JPanel_MessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPanel_MessageLayout.createSequentialGroup()
-                .addComponent(lbl_title2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addComponent(lbl_title3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(20, 20, 20))
+            .addGroup(JPanel_MessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(JPanel_MessageLayout.createSequentialGroup()
+                    .addGap(52, 52, 52)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(58, Short.MAX_VALUE)))
         );
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(JPanel_Session, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(JPanel_Message, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(JPanel_Session, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(JPanel_Message, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(JPanel_Session, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(JPanel_Message, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(228, Short.MAX_VALUE)))
         );
 
         pack();
@@ -202,6 +261,33 @@ public class Int_Bus extends javax.swing.JFrame {
     private void txt_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_PasswordActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_PasswordActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JPanel_Session.setVisible(true);
+        JPanel_Message.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        JPanel_Session.setVisible(false);
+        JPanel_Message.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        if(condicion)
+        {
+            mensaje = "ACELERE";
+            color=color.green;
+            condicion=false;
+        }
+        else
+        {
+            mensaje = "DESACELERE";
+            color=color.red;
+            condicion=true;
+        }
+        lbl_Message.setText(mensaje);
+        lbl_Message.setForeground(color);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -241,13 +327,16 @@ public class Int_Bus extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JPanel_Message;
     private javax.swing.JPanel JPanel_Session;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JLabel lbl_Message_ACELERE;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lbl_Message;
     private javax.swing.JLabel lbl_title1;
-    private javax.swing.JLabel lbl_title2;
+    private javax.swing.JLabel lbl_title3;
     private javax.swing.JPasswordField txt_Password;
     private javax.swing.JTextField txt_User;
     // End of variables declaration//GEN-END:variables
