@@ -15,7 +15,12 @@ public class ProyectoSoftwareI {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Int_PanelControl pnc = new Int_PanelControl();
+        pnc.setVisible(true);
+        
+        Int_Bus bs = new Int_Bus();
+        bs.setVisible(true);
+        
         System.out.println("Hola Mundo");
     }
     
